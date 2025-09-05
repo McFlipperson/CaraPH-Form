@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaraPH - See If You Qualify for 3 Months FREE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #0038a8 0%, #ce1126 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .form-header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .form-header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .security-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .form-body {
+            padding: 40px;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+        }
+        
+        .form-section h3 {
+            color: #0038a8;
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-bottom: 2px solid #fcd116;
+            padding-bottom: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .required {
+            color: #ce1126;
+        }
+        
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus, 
+        select:focus, 
+        textarea:focus {
+            outline: none;
+            border-color: #0038a8;
+            box-shadow: 0 0 0 3px rgba(0,56,168,0.1);
+        }
+        
+        .radio-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .radio-option:hover {
+            border-color: #0038a8;
+            background: #f8f9ff;
+        }
+        
+        .radio-option input[type="radio"] {
+            margin-right: 8px;
+            width: auto;
+        }
+        
+        .radio-option.selected {
+            border-color: #0038a8;
+            background: #f8f9ff;
+        }
+        
+        .urgency-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .urgency-option {
+            text-align: center;
+            padding: 15px 10px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .urgency-option:hover {
+            border-color: #ce1126;
+            background: #fff5f5;
+        }
+        
+        .urgency-option.selected {
+            border-color: #ce1126;
+            background: #fff5f5;
+        }
+        
+        .urgency-option .emoji {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .submit-section {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            margin: 0 -40px -40px -40px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #ce1126 0%, #0038a8 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(206,17,38,0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(206,17,38,0.4);
+        }
+        
+        .guarantee {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .guarantee strong {
+            color: #0038a8;
+        }
+        
+        @media (max-width: 768px) {
+            .form-body {
+                padding: 20px;
+            }
+            
+            .radio-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .urgency-indicators {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>🎁 See If You Qualify for 3 Months FREE</h1>
+            <p>Meet Cara - Your AI Assistant That Eliminates Paperwork Forever</p>
+
+        </div>
+        
+<form class="form-body" id="qualificationForm" name="qualification" netlify>
+    <input type="hidden" name="form-name" value="qualification" />
+                <!-- Facility Information -->
+            <div class="form-section">
+                <h3>🏢 About Your Facility</h3>
+                
+                <div class="form-group">
+                    <label for="facilityName">Facility Name <span class="required">*</span></label>
+                    <input type="text" id="facilityName" name="facilityName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Facility Type <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="facilityType" value="hospital" id="hospital">
+                            <label for="hospital">🏥 Hospital</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="facilityType" value="clinic" id="clinic">
+                            <label for="clinic">🏥 Clinic</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="facilityType" value="police" id="police">
+                            <label for="police">👮 Police Station</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="facilityType" value="school" id="school">
+                            <label for="school">👨‍🏫 School</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="facilityType" value="government" id="government">
+                            <label for="government">🏛️ Government</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="facilityType" value="other" id="other">
+                            <label for="other">📋 Other</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location (City/Province) <span class="required">*</span></label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Number of Staff Who Handle Documentation <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="staffCount" value="5-9" id="staff5-9">
+                            <label for="staff5-9">5-9 Staff</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="staffCount" value="10-25" id="staff10-25">
+                            <label for="staff10-25">10-25 Staff</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="staffCount" value="26-50" id="staff26-50">
+                            <label for="staff26-50">26-50 Staff</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="staffCount" value="50+" id="staff50plus">
+                            <label for="staff50plus">50+ Staff</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Documentation Pain Points -->
+            <div class="form-section">
+                <h3>📝 Current Documentation Challenges</h3>
+                
+                <div class="form-group">
+                    <label>How many hours per day does your team spend on paperwork? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="paperworkHours" value="1-2" id="hours1-2">
+                            <label for="hours1-2">1-2 hours</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="paperworkHours" value="3-5" id="hours3-5">
+                            <label for="hours3-5">3-5 hours</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="paperworkHours" value="6-8" id="hours6-8">
+                            <label for="hours6-8">6-8 hours</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="paperworkHours" value="8+" id="hours8plus">
+                            <label for="hours8plus">8+ hours</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="biggestChallenge">What's your biggest documentation challenge?</label>
+                    <textarea id="biggestChallenge" name="biggestChallenge" rows="3" placeholder="e.g., Takes too long, errors in records, staff complain about typing..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Primary language used in your facility</label>
+                    <select name="primaryLanguage">
+                        <option value="">Select language</option>
+                        <option value="english">English</option>
+                        <option value="tagalog">Tagalog</option>
+                        <option value="bisaya">Bisaya</option>
+                        <option value="hiligaynon">Hiligaynon</option>
+                        <option value="mixed">Mixed languages</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Decision Timeline -->
+            <div class="form-section">
+                <h3>⚡ How Urgent Is Your Need?</h3>
+                
+                <div class="urgency-indicators">
+                    <div class="urgency-option" data-value="immediate">
+                        <span class="emoji">🔥</span>
+                        <strong>ASAP</strong><br>
+                        <small>Need solution now</small>
+                        <input type="radio" name="timeline" value="immediate" style="display:none;">
+                    </div>
+                    <div class="urgency-option" data-value="1-3months">
+                        <span class="emoji">⚡</span>
+                        <strong>1-3 Months</strong><br>
+                        <small>Planning soon</small>
+                        <input type="radio" name="timeline" value="1-3months" style="display:none;">
+                    </div>
+                    <div class="urgency-option" data-value="3-6months">
+                        <span class="emoji">📅</span>
+                        <strong>3-6 Months</strong><br>
+                        <small>Future planning</small>
+                        <input type="radio" name="timeline" value="3-6months" style="display:none;">
+                    </div>
+                    <div class="urgency-option" data-value="exploring">
+                        <span class="emoji">🤔</span>
+                        <strong>Just Looking</strong><br>
+                        <small>Early research</small>
+                        <input type="radio" name="timeline" value="exploring" style="display:none;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="form-section">
+                <h3>📞 Contact Information</h3>
+                
+                <div class="form-group">
+                    <label for="contactName">Your Name <span class="required">*</span></label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="position">Your Position/Title</label>
+                    <input type="text" id="position" name="position" placeholder="e.g., Administrator, IT Manager, Doctor">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+63 XXX XXX XXXX">
+                </div>
+                
+                <div class="form-group">
+                    <label>Preferred Contact Method</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="contactMethod" value="email" id="contactEmail">
+                            <label for="contactEmail">📧 Email</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="contactMethod" value="phone" id="contactPhone">
+                            <label for="contactPhone">📞 Phone</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="contactMethod" value="whatsapp" id="contactWhatsapp">
+                            <label for="contactWhatsapp">📱 WhatsApp</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <div class="submit-section">
+            <button type="submit" class="submit-btn" form="qualificationForm">
+                🚀 Check My Qualification Now
+            </button>
+            <div class="guarantee">
+                <strong>100% Privacy Guaranteed</strong> - We'll never share your information<br>
+                Response within 24 hours • No spam • No pressure
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle radio option styling
+        document.querySelectorAll('.radio-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const radio = this.querySelector('input[type="radio"]');
+                const name = radio.name;
+                
+                // Remove selected class from all options with same name
+                document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
+                    r.closest('.radio-option').classList.remove('selected');
+                });
+                
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                radio.checked = true;
+            });
+        });
+        
+        // Handle urgency indicators
+        document.querySelectorAll('.urgency-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected from all urgency options
+                document.querySelectorAll('.urgency-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Add selected to clicked option
+                this.classList.add('selected');
+                
+                // Set the hidden radio value
+                const value = this.dataset.value;
+                const radio = this.querySelector('input[type="radio"]');
+                radio.checked = true;
+            });
+        });
+        
+        // Form submission
+        document.getElementById('qualificationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+           // Show success message (replace with actual form submission)
+alert('Thank you! We\'ll review your qualification and contact you within 24 hours.');
+
+// Let Netlify handle the actual form submission
+return true;
+        });
+    </script>
+</body>
+</html>
