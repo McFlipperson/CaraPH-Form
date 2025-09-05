@@ -446,6 +446,7 @@
         });
         
         // Handle urgency indicators
+        // Handle urgency indicators
         document.querySelectorAll('.urgency-option').forEach(option => {
             option.addEventListener('click', function() {
                 // Remove selected from all urgency options
@@ -461,21 +462,6 @@
                 const radio = this.querySelector('input[type="radio"]');
                 radio.checked = true;
             });
-        });
-        
-        // Form submission
-        document.getElementById('qualificationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Collect form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-           // Show success message (replace with actual form submission)
-alert('Thank you! We\'ll review your qualification and contact you within 24 hours.');
-
-// Let Netlify handle the actual form submission
-return true;
         });
     </script>
 </body>
